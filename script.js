@@ -10,14 +10,44 @@ let lastScrollY = window.scrollY;
 const navbar = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-    // Check if the user is scrolling down or up
     if (window.scrollY > lastScrollY) {
-        // Scrolling down - shrink the navbar
         navbar.classList.add("shrink");
     } else {
-        // Scrolling up - return to normal size
         navbar.classList.remove("shrink");
     }
-    // Update last scroll position
     lastScrollY = window.scrollY;
 });
+
+
+// HARD COOOOOOOOOOOOOOOOOOOOOODE 8))
+
+const registerBtn = document.querySelector('#register');
+const loginBtn = document.querySelector('#login');
+
+const loginTag = document.querySelector('#login-tag');
+const registerTag = document.querySelector('#register-tag');
+
+const loginPg = document.querySelector('#login-page');
+const registerPg = document.querySelector('#register-page');
+
+registerBtn.addEventListener('click', () => {
+    loginPg.style.left = '0';
+    registerPg.style.left = '100%';
+})
+
+loginBtn.addEventListener('click', () => {
+    loginPg.style.left = '-100vh';
+    registerPg.style.left = '0%';
+})
+
+registerTag.addEventListener('click', () => {
+    loginPg.style.left = '0';
+    registerPg.style.left = '100%';
+})
+
+loginTag.addEventListener('click', () => {
+    loginPg.style.left = '-100vh';
+    registerPg.style.left = '0%';
+})
+
+
