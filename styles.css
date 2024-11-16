@@ -7,14 +7,15 @@
 }
 
 body {
-    height:200vh;
-    display:flex;
-    justify-content:center;
+    min-height:100vh;
+    width:auto;
     background-image: url(./images/BACKGROUNDBASIS.jpg);
     background-repeat:no-repeat;
     background-position:center;
     background-attachment:fixed;
     background-size:cover;
+    display:flex;
+    flex-direction: column;
 }
 
                             /* JM - NAVIGATION BAR */
@@ -35,7 +36,7 @@ nav {
 nav.shrink {
     height: 8vh;
     transition: all 0.3s ease-in-out;
-    font-size:.45rem;
+    font-size:.2rem;
 }
 
 nav.shrink > .buttons {
@@ -140,14 +141,14 @@ form {
     display:flex;
     justify-content:center;
     align-items:center;
-    width:40%;
-    height:62vh;
+    width:36%;
+    height:70vh;
+    margin:7% auto 10% auto;
     background-color:hsla(0, 0%, 100%, .4);
     backdrop-filter:blur(2px);
     border-radius:12px;
     text-align:center;
     transition:all 0.2s ease-in-out;
-    margin-top:9%;
     overflow:hidden;
 }
 
@@ -192,7 +193,8 @@ form > .input-wrapper {
     outline:none;
 }
 
-.input-wrapper > #signin {
+.input-wrapper > #signin,
+.input-wrapper > #signup {
     width:100%;
     border-radius: 24px;
     padding:.7rem;
@@ -204,7 +206,8 @@ form > .input-wrapper {
     margin-top:1%;
 }
 
-.input-wrapper > #signin:hover {
+.input-wrapper > #signin:hover,
+.input-wrapper > #signup:hover {
     background-color:hsla(0, 0%, 100%, .4);
     transition:all .2s ease-in-out;
 }
@@ -257,4 +260,64 @@ fieldset > p > a {
 
 .register > .input-wrapper svg {
     width:1rem;
+}
+
+.wave-animation {
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-color:red;
+    overflow:hidden;
+}
+
+.wave-animation > .wave {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:300px;
+    background:url(/images/wave.png);
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:2500px 300px;
+    animation:animate 4s ease-in-out infinite;
+    animation-delay:calc(var(--i) * 0.25s);
+}
+
+.wave#wave1 {
+    z-index:1000;
+    opacity:1;
+    background-position-x:0px;
+}
+
+.wave#wave2 {
+    z-index:999;
+    opacity:0.7;
+    background-position-x:100px;    
+}
+
+.wave#wave3 {
+    z-index:998;
+    opacity:0.5;
+    background-position-x:50px;    
+}
+
+.wave#wave4 {
+    z-index:999;
+    opacity:0.9;
+    background-position-x:100px;    
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform:translateY(0px);
+    }
+    50% {
+        transform:translateY(10px);
+    }
+}
+
+.about-us {
+    background-color:hsl(218, 96%, 51%);
+    height:100vh;
 }
