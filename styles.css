@@ -9,7 +9,6 @@
 body {
     min-height:100vh;
     width:auto;
-    background-image: url(./images/BACKGROUNDBASIS.jpg);
     background-repeat:no-repeat;
     background-position:center;
     background-attachment:fixed;
@@ -18,19 +17,100 @@ body {
     flex-direction: column;
 }
 
+h1, strong {
+    font-weight:bold;
+}
+
+/* PARALLAAAAAAAAAAAAAAAAAAAAAAAAAAAX */
+
+.parallax-wrapper {
+    background-image: url(./images/BACKGROUNDBASIS.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:relative;
+    background-size:cover;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index:-10;
+    text-align:center;
+    text-transform: uppercase;
+    color:white;
+    text-shadow:2px 2px 2px black;
+}
+
+.parallax-wrapper > #parallax-text {
+    position:absolute; 
+    top:400px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:5rem;
+    text-wrap:nowrap;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+#birds {
+    z-index:2;
+    position:absolute;
+    top:12px;
+    left:-600px;
+    width:100%;
+    height:auto;
+}
+
+#img-cloud-right {
+    position:absolute;
+    top:-5%;
+    right:-12px;
+    width:60vw;
+    height:auto;
+}
+
+#img-cloud-left {
+    position:absolute;
+    top:-30%;
+    left:-12px;
+    width:60vw;
+    height:auto;
+}
+
+#palm-mid-left {
+    position:absolute;
+    left:0;
+    width:15vw;
+    height:auto;
+    top:10%;
+}
+
+#palm-bottom-left {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:27vw;
+    height:auto;
+}
+
+#palm-bottom-right {
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
                             /* JM - NAVIGATION BAR */
 
 nav {
     position:fixed;
     background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
     width:100%;
-    height:14vh;
+    height:12vh;
     display:flex;
     justify-content:space-between;
     transition: all 0.3s ease-in-out;
     backdrop-filter:blur(2px);
     align-items:center;
-    z-index:5;
+    z-index:9995;
+    text-wrap:nowrap;
 }
 
 nav.shrink {
@@ -121,12 +201,12 @@ nav.shrink > .buttons {
 
 .buttons > button {
     text-transform: uppercase;
-    padding:.8em 2.5em;
+    padding:1em 3.2em;
     border-radius:28px;
     cursor:pointer;
     border:none;
     transition: all 0.1s ease-in-out;
-    font-size: inherit;
+    font-size: 1rem;
     background-color:hsla(0, 0%, 100%, .8);
 }
 
@@ -137,6 +217,7 @@ nav.shrink > .buttons {
                     /* REGISTRATION OR LOG IN SECTION */
 
 form {
+    visibility: hidden;
     position:relative;
     display:flex;
     justify-content:center;
@@ -144,12 +225,25 @@ form {
     width:36%;
     height:70vh;
     margin:7% auto 10% auto;
-    background-color:hsla(0, 0%, 100%, .4);
+    background-color:hsla(0, 0%, 90%, .8);
     backdrop-filter:blur(2px);
     border-radius:12px;
     text-align:center;
-    transition:all 0.2s ease-in-out;
     overflow:hidden;
+}
+
+form > #closebtn {
+    position:absolute;
+    right:5%;
+    top:5%;
+    cursor:pointer;
+    transition:all .2s ease-in-out;
+    z-index:5;
+}
+
+form > #closebtn:hover {
+    color:white;
+    transition:all .2s ease-in-out;
 }
 
 form > fieldset {
@@ -164,6 +258,10 @@ form > fieldset {
     align-items:center;
     transition:all 0.2s ease-in-out;
     flex-direction:column;
+}
+
+fieldset > h1 {
+    font-size:3.5rem;
 }
 
 form > .input-wrapper {
@@ -265,9 +363,7 @@ fieldset > p > a {
 .wave-animation {
     position:relative;
     width:100%;
-    height:100vh;
-    background-color:red;
-    overflow:hidden;
+    height:30vh;
 }
 
 .wave-animation > .wave {
@@ -275,11 +371,11 @@ fieldset > p > a {
     top:0;
     left:0;
     width:100%;
-    height:300px;
+    height:250px;
     background:url(/images/wave.png);
     background-repeat:no-repeat;
     background-position:top;
-    background-size:2500px 300px;
+    background-size:3500px 300px;
     animation:animate 4s ease-in-out infinite;
     animation-delay:calc(var(--i) * 0.25s);
 }
@@ -287,37 +383,363 @@ fieldset > p > a {
 .wave#wave1 {
     z-index:1000;
     opacity:1;
-    background-position-x:0px;
+    background-position-x:-10px;
 }
 
 .wave#wave2 {
     z-index:999;
-    opacity:0.7;
+    opacity:.2;
     background-position-x:100px;    
 }
 
 .wave#wave3 {
     z-index:998;
     opacity:0.5;
-    background-position-x:50px;    
+    background-position-x:0px;
 }
 
 .wave#wave4 {
     z-index:999;
-    opacity:0.9;
-    background-position-x:100px;    
+    opacity:0.6;
+    background-position-x:200px;    
 }
 
 @keyframes animate {
     0%, 100% {
-        transform:translateY(0px);
+        transform:translateY(0%);
     }
     50% {
-        transform:translateY(10px);
+        transform:translateY(15%);
     }
 }
 
-.about-us {
-    background-color:hsl(218, 96%, 51%);
-    height:100vh;
+main {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    flex-direction:column;
+    margin-top:-5vh;
+}
+
+main > .main-header {
+    padding: 8rem;
+    font-size:1.5rem;
+    display:flex;    
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 20%, rgba(22,11,125,1) 55%, rgba(14,8,69,1) 80%);
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:100%;
+}
+
+main > .main-header > p {
+    font-size:1.2rem;
+    width:85%;
+}
+
+main > .main-header > p:nth-child(2) {
+    padding-top:4.5rem;
+}
+
+.header-left {
+    width:100%;
+    text-align:center;
+    font-size:3rem;
+    padding:5vw 15vw;
+}
+
+.main-header > .main-quote-container {
+    min-height:60vh;
+    padding:60vh 10vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.main-quote-container > .main-quote {
+    color:white;
+    width: 100%;
+    height:100%;
+    font-size:2.8rem;
+    font-style: italic;
+}
+
+main > .table-of-contents {
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    min-height:100vh;
+    width:100%;
+    padding:5vw 10vw 0 10vw;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/TableofContents1.jpg);
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:cover;
+    overflow:hidden;
+    position:relative;
+}
+
+#bubbles {
+    position:absolute;
+    right:.2%;
+    animation: animationBubbles 8s infinite ease-in-out;
+}
+
+#bubbles2 {
+    position:absolute;
+    z-index:100;
+    width:20%;
+    height:auto;
+    left:.2%;
+    animation: animationBubbles 5s infinite ease-in-out;
+    transform:scaleX(-1);
+}
+
+@keyframes animationBubbles {
+    from {
+        transform:translateY(150%);
+    }
+    to {
+        transform:translateY(-150%);
+    }
+}
+
+.table-of-contents > h1 {
+    width:100%;
+    font-weight:300;
+    font-size:3rem;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    align-self:flex-start;
+}
+
+.table-of-contents > .content-card {
+    width:35%;
+    display:flex;
+    justify-content:start;
+    padding:1%;
+    align-items:center;
+    border-bottom:5px solid hsl(180, 100%, 50%);
+    margin:1% 4% 0 4%;
+    position:relative;
+    transition:all .2s ease-in-out;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.content-card > h1 {
+    z-index:5;
+}
+
+.content-card > .content-card-title {
+    padding-left:10%;
+}
+
+.content-card::before {
+    content:'';
+    height:100%;
+    position:absolute;
+    top:0;
+    left:100%;
+    width:100%;
+    transition:all .2s ease-in-out;
+    background-color:hsl(180, 100%, 50%);
+}
+
+.content-card:hover::before {
+    left:0%;
+    transition:all .2s ease-in-out;
+}
+
+.content-card:hover {
+    color:hsl(0, 0%, 0%);
+}
+
+.content-card::after {
+    content:'';
+    position:absolute;
+    font-size:.8rem;
+    color:black;
+    text-wrap:wrap;
+    width:100%;
+    top:50%;
+    left:100%;
+    transition:all .2s ease-in-out;
+    transform:translateY(-50%)
+}
+
+.content-card:hover::after {
+    transition:all .2s ease-in-out;
+    left:0%;
+    padding-left:22%;
+    padding-right:5%;
+}
+
+.card-1::after {
+    content:'Programming languages, high and low level languages, and steps in developing a program';
+}
+
+.card-2::after {
+    content:'Data, information, and types of data';
+}
+
+.card-3::after {
+    content:'Variables, rules in writing variable names, and ways in writing variables';
+}
+
+.card-4::after {
+    content:'Properties of an algorithm, pseudocode, and flowchart';
+}
+
+.card-5::after {
+    content:'Multiplication, division, modulus, addition, subtractions, and prioritization';
+}
+
+.card-6::after {
+    content:'Sequence structure, selection structure, repetition structure';
+}
+
+.card-7::after {
+    content:'Relational operations, operators, and expressions,';
+}
+
+.card-8::after {
+    content:'Incrementation, decrementation, while loop, for loop, nested loops, sentinel-controlled loops, and counter-controlled loops';
+}
+
+.card-9::after {
+    content:'Defining and calling methods in c#, parameters, return types, and void methods';
+}
+
+.card-10::after {
+    content:'One-dimensional, and multidimensional arrays';
+}
+
+.card-11::after {
+    content:'Classes and objects in c#, access modifiers, properties and fields';
+}
+
+.card-12::after {
+    content:'Inheritance, polymorphism, encapsulation, and abstract classes and interfaces';
+}
+
+.get-started {
+    width:100%;
+    font-weight:300;
+    font-size:3rem;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    padding:10vh 0 10vh 70%;
+}
+
+.get-started > #get-started {
+    font-size:2rem;
+    color:white;
+    border-radius:24px;
+    border:none;
+    padding:1rem 3rem;
+    font-family:inherit;
+    background-color:hsl(180, 100%, 40%);
+    text-transform: uppercase;
+    position:relative;
+    transition:all .2s ease-in-out;
+    cursor:pointer;
+}
+
+#get-started:hover {
+    transition:all .2s ease-in-out;
+    padding-right:4.5rem;
+}
+
+#get-started::before {
+    content:'';
+    right:8%;
+    opacity:0;
+}
+
+#get-started:hover::before {
+    content:"\2794";
+    transition:position .2s ease-in-out;
+    transition:opacity .2s ease-in-out;
+    opacity:1;
+    position:absolute;
+    top:50%;
+    right:8%;
+    transform:translateY(-50%);
+}
+
+.about-us-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about-us-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.about-us-wave .shape-fill {
+    fill: #113977;
+}
+
+/* AMACA */
+
+#about-us {
+    position:relative;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/AboutUsSeabed.jpg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    min-height:100vh;
+    width:100%;
+    padding:5vw 10vw 0 10vw;
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:cover;
+    text-align:center;
+    overflow:hidden;
+}
+
+#about-us > * {
+    color:white;
+}
+
+
+#about-us > h1 {
+    padding-top:12%;
+    width:100%;
+    font-weight:500;
+    font-size:3rem;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+}
+
+.team {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap:3%;
+}
+
+.card {
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(./images/amaca/John\ Mark.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
 }

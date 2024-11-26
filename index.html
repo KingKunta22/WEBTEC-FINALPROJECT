@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to Programming</title>
+    <!-- Latest Bootstrap 5 (ALWAYS INJECT BOOTSTRAP FIRST)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    
 </head>
 <body>
+    <div class="parallax-wrapper">
+        <h1 id="parallax-text">Programming Fundamentals</h1>
+        <img src="./images/Layer1.png" id="birds">
+        <img src="./images/cloud1.png" id="img-cloud-right">
+        <img src="./images/cloud2.png" id="img-cloud-left">
+        <img src="./images/palm1.png" id="palm-mid-left">
+        <img src="./images/palm2.png" id="palm-bottom-left">
+        <img src="./images/palm3.png" id="palm-bottom-right">
+    </div>
     <!--JM-->
     <nav>
         <ul class="nav-wrapper">
             <li class="nav-links active"><a href="#">Home</a></li>
-            <li class="nav-links"><a href="#">Topics</a></li>
-            <li class="nav-links"><a href="#">About Us</a></li>
-            <li class="nav-links"><a href="#">Team</a></li>
-            <li class="nav-links"><a href="#">Contact Us</a></li>
+            <li class="nav-links"><a href="#table-of-contents">Table of Contents</a></li>
+            <li class="nav-links"><a href="#about-us">About Us</a></li>
+            <li class="nav-links"><a href="#contact-us">Contact Us</a></li>
         </ul>
         <div class="buttons">
             <button type="button" class="register" id="register">Login</button>
-            <button type="button" class="login" id="login">Sign Up</button>
+            <button type="button" class="login" id="login">Register</button>
         </div>
     </nav>
-
     <form>
+        <svg aria-hidden="true" id="closebtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         <fieldset class="login" id="login-page">
             <h1>LOGIN</h1>
             <div class="input-wrapper">
                 <div class="input-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                     <input type="text" placeholder="Username or Email">
                 </div>
                 <div class="input-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <input type="password" placeholder="Password">
                 </div>
-                <button id="signin">Sign In</button>
+                <button id="signin">Sign    In</button>
                 <div class="options">
                     <div class="remember-me">
                         <input type="checkbox" id="rememberme">
@@ -49,20 +62,20 @@
                     </div>
                 </div>
             </div>
-            <p>Don't have an account? <a id="register-tag" href="#  ">Sign Up</a></p>
+            <p>Don't have an account? <a id="register-tag" href="#  ">Register</a></p>
         </fieldset>
         <fieldset class="register" id="register-page">
             <h1>REGISTER</h1>
             <div class="input-wrapper">
                 <div class="input-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                     <input type="text" placeholder="Name">
                 </div>
                 <div class="input-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>                    <input type="email" placeholder="Email">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>                    <input type="email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <input type="password" placeholder="Password">
                 </div>
                 <button id="signup">Sign Up</button>
@@ -71,17 +84,135 @@
         </fieldset>
     </form>
     <!--LEO-->
-    <section class="wave-animation">
+    <div class="wave-animation">
         <div class="wave" id="wave1" style="--i:1;"></div>
         <div class="wave" id="wave2" style="--i:2;"></div>
         <div class="wave" id="wave3" style="--i:3;"></div>
         <div class="wave" id="wave4" style="--i:4;"></div>
-    </section>
+    </div>
     <main>
-
+        <div class="main-header">
+            <h1>Want to learn about programming? <br>You've come to the right place!</h1>
+            <p>Our website is your ultimate guide to becoming a skilled programmer.
+                Starting from the basics like variables and loops to advanced concepts like algorithms,
+                we provide a structured learning path designed to help you succeed. We also feature curated
+                videos, images, and resources from renowned programming content creators, giving you access
+                to expert insights and valuable content to enhance your learning journey. Explore, learn, and grow
+                with guidance from the best in the field!
+            </p>
+            <br>
+            <p>This course provides fundamental concepts and terminology of computer programming, problem solving and
+                computer programming skills for students with no prior experience in the area of programming. Students will
+                be using C# .NET Console Application, a high-level computer programming language, to learn how to write,
+                compile and execute programs</p>
+            <div class="main-quote-container">
+                <div class="main-quote">
+                    <h1>“The best way to get a project done faster is to start sooner.”</h1>
+                    <br>
+                    <p>— Jim Highsmith</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-of-contents" id="table-of-contents">
+            <img id="bubbles" src="./images/bubblespng.png" >
+            <img id="bubbles2" src="./images/bubblespng.png" >
+            <h1>Table of <strong>Contents</strong></h1>
+            <div class="content-card card-1">
+                <h1>01</h1>
+                <div class="content-card-title">Understanding the computer program</div>
+            </div>
+            <div class="content-card card-2">
+                <h1>02</h1>
+                <div class="content-card-title">Data versus information</div>
+            </div>
+            <div class="content-card card-3">
+                <h1>03</h1>
+                <div class="content-card-title">Variables</div>
+            </div>
+            <div class="content-card card-4">
+                <h1>04</h1>
+                <div class="content-card-title">Algorithm</div>
+            </div>
+            <div class="content-card card-5">
+                <h1>05</h1>
+                <div class="content-card-title">Arithmetic Operations and Expressions</div>
+            </div>
+            <div class="content-card card-6">
+                <h1>06</h1>
+                <div class="content-card-title">Programming Structures</div>
+            </div>
+            <div class="content-card card-7">
+                <h1>07</h1>
+                <div class="content-card-title">Selection Structures</div>
+            </div>
+            <div class="content-card card-8">
+                <h1>08</h1>
+                <div class="content-card-title">Looping</div>
+            </div>
+            <div class="content-card card-9">
+                <h1>09</h1>
+                <div class="content-card-title">Functions and Methods</div>
+            </div>
+            <div class="content-card card-10">
+                <h1>10</h1>
+                <div class="content-card-title">Collections and Arrays</div>
+            </div>
+            <div class="content-card card-11">
+                <h1>11</h1>
+                <div class="content-card-title">Object-Oriented Programming</div>
+            </div>
+            <div class="content-card card-12">
+                <h1>12</h1>
+                <div class="content-card-title">Advanced OOP Concepts</div>
+            </div>
+            <div class="get-started">
+                <button id="get-started"><strong>Dive In!</strong></button>
+            </div>
+        </div>
+        <section class="about-us" id="about-us">
+            <img id="bubbles" src="./images/bubblespng.png" >
+            <img id="bubbles2" src="./images/bubblespng.png" >
+            <div class="about-us-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <h1>MEET OUR GROUP</h1>
+                <div class="group-description">
+                    <p>Our group is led by a dedicated and experienced professional who brings a wealth of expertise to the table. As the Group Leader, they are responsible for driving the overall vision and strategy, ensuring the team stays focused and aligned. With their strong leadership skills and deep industry knowledge, they play a pivotal role in guiding the team and overseeing the successful delivery of our projects. Their commitment to excellence is essential in making our group a success.</p>
+                </div>
+            <div class="team">
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">LEONARD CHLOIE</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Info card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">BRYLLE</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Info card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">JOHN MARK</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Info card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                    <div class="card-header">TITO</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Info card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="about-us">
-        <h1>About Us</h1>
-    </section>
 </body>
 </html>

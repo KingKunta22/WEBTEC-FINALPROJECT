@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+<header>
+<div class="logo">
+<img src="images/CYBERWORKS@2x.png" alt="cyberworks">
+</div>
+
+<nav>
+<ul class="nav_links" id="navlist">
+<li><a href="index.php">Home</a></li>
+<li><a href="#">Course links</a>
+<ul class="dropdown">
+<li><a href="https://www.zybooks.com/">Zybook</a></li>
+<li><a href="https://tophat.com/">TopHat</a></li>
+<li><a href="https://tinyurl.com/CSCI355-Spring2020">Google Drive</a></li>
+<li><a href="https://bbhosted.cuny.edu/">Blackboard</a></li>
+<li><a href="https://www.w3schools.com/">W3Schools</a></li>
+</ul>
+</li>
+<li><a class="active" href="about_us.html">About Us</a></li>
+<li><a href="">Contact Us</a>
+<ul class="dropdown">
+<li><a href="help.php">Help</a></li>
+</ul>
+</li>
+<li id="loginlink"><a href="login.php">Login</a></li>
+<li id="signuplink"><a href="signup.php"">Sign Up</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="b1">
+<!-- MAIN BODY -->
+</div>
+
+<div class="logininfo">
+<!-- <?php if (isset($_SESSION['success'])) : ?>
+<div class="error" >
+<h3>
+<?php
+echo $_SESSION['success'];
+unset($_SESSION['success']);
+?>
+</h3>
+</div>
+<?php endif ?> -->
+
+<?php if (isset($_SESSION['login'])) : ?>
+<script>
+document.getElementById("loginlink").style.display="none";
+document.getElementById("signuplink").style.display="none";
+//Get usertype
+var usertype = "<?php echo $_SESSION['usertype']; ?>";
+console.log(usertype);
+
+if(usertype == "S") {
+$('#navlist').append('<li><a href="#">Assigned</a></li>');
+}
+
+if(usertype == "P") {
+$('#navlist').append('<li><a href="#">Question Sets</a><ul class="dropdown"><li><a href="#">Create</a></li><li><a href="#">Manage</a></li></ul></li>');
+}
+
+if(usertype == "D") {
+$('#navlist').append('<li><a href="#">Control Panel</a></li>');
+}
+
+$('#navlist').append('<li style="color:#B1B2C7;">welcome, <?php echo $_SESSION['login']; ?></li>');
+$('#navlist').append("<li><a href='index.php?logout='1''>Logout</a></li>");
+</script>
+<?php endif ?>
+</div>
+
+<footer>
+<p>
+Copyright © 2020 Cyberworks Inc. All rights Reserved.
+</p>
+</footer>
+</body>
+
+</html>
+
+
+
