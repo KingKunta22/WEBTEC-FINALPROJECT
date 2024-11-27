@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+}
+
+.navbar{
+    background-color: black;
+    padding: 20px;
+    
+
+}
+
+a{
+    color: white;
+    font-family: verdana;
+    padding: 5px;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-decoration: none;
+    font-size: large;
+}
+
+a:hover{
+    color: gold;
+    transition: 0.5s;
+}
+.bp{
+    color: gold;
+}
+
+.hr-gold{
+    background-color: gold;
+    margin-bottom: 30px;
+}
+
+.lesson{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    
+    
+}
+
+.first-container{
+    margin-bottom: 20%;
+    margin: auto;
+    border-style: ridge;
+    width: 80%;
+    text-align: center;
+}
+
+.variable{
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    font-size: 50px;
+    margin: none;
+    text-align: center;
+}
+
+.sec-container{
+    margin: auto;
+    border-style: ridge;
+    width: 80%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.specific-learning{
+    font-size: 25px;
+    background-color: skyblue;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+.learningsparent{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  li {
+    padding: 10px;
+    font-weight: normal;
+    font-family: Verdana;
+    display: flex;
+    align-items: center;
+  }
+  li::before {
+    content: "•";
+    margin-right: 10px;
+  }
+
+  .owl{
+    margin-left: 200px;
+    margin-top: 50px;
+    display: inline-block;
+  }
+
+  .first-p{
+    font-size: 20px;
+    font-family: Verdana;
+  }
+
+  .what-are {
+    display: inline-block;
+    position: relative;
+    top:  -200px;
+    right: -21%;    
+    
+  }
+
+  .variable1{
+    display: inline-block;
+    position: relative;
+    top:  -200px;
+    right: -21%; 
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .technically{
+    display: inline-block;
+    position: relative;
+    top:  -120px;
+    right: -10%; 
+    font-size: 20px;
+    
+  }
+
+  .variable2{
+    display: inline-block;
+    position: relative;
+    top:  -120px;
+    right: -10%; 
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .symbolic{
+    display: inline-block;
+    position: relative;
+    top:  -120px;
+    right: -10%; 
+    font-size: 20px;
+    
+  }
+
+  .variable3{
+    display: inline-block;
+    position: relative;
+    top:  -120px;
+    right: -10%; 
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .values{
+    display: inline-block;
+    position: relative;
+    top:  -120px;
+    right: -25%; 
+    font-size: 20px;
+    
+  }
+
+  .program{
+    display: inline-block;
+    position: relative;
+    top:  -100px;
+    left: -690px; 
+    font-size: 20px;
+    
+  }
+
+  .rules{
+    display: inline-block;
+    position: relative;
+    top:  -30px;
+    right: -15%; 
+    font-size: 25px;
+    font-weight: bold;
+    
+  }
+
+  .create{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: 10%; 
+    font-size: 20px;
+    
+  }
+
+  .comb{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .first-char{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .embedded{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .descriptive{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .writing{
+    display: inline-block;
+    position: relative;
+    top: -100px;
+    right: -15%; 
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Verdana;
+    
+  }
+
+  .owls{
+    margin-left: 200px;
+    margin-top: 50px;
+    display: inline-block;
+    position: relative;
+    top: -250px;
+  }
+
+  .ways{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -15%; 
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Verdana;
+    
+  }
+
+  .proper{
+    display: inline-block;
+    position: relative;
+    top:  -40px;
+    right: 8%; 
+    font-size: 20px;
+    font-weight: normal;
+    font-family: Verdana;
+    
+  }
+
+  .pascal{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .camel{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  .upper{
+    display: inline-block;
+    position: relative;
+    top:  20px;
+    right: -20%; 
+    font-size: 20px;
+    
+  }
+
+  table {
+
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 20px;
+
+  }
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  }
+
+  .valid{
+    margin-bottom: 5%;
+    position: relative;
+    top:  40px;
+    right: -15%; 
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Verdana;
+    
+  }
+
+
+
+
+
+
+  
+  
+
+
+  
+
+
+

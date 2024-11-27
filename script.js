@@ -24,7 +24,6 @@ function scrollToTop() {
     }, 500); // Adjust timeout based on scroll animation duration
 }
 
-
 // HARD COOOOOOOOOOOOOOOOOOOOOODE 8))
 
 const registerBtn = document.querySelector('#register');
@@ -56,6 +55,29 @@ closeBtn.addEventListener('click', () => {
     formPg.style.visibility = "hidden";
     loginPg.style.left = '-100vh'; // Reset position of login page
     registerPg.style.left = '100%'; // Reset position of register page
+})
+
+// FUNCTION FOR THE USER TO LOG IN
+
+const userPassword = document.querySelector('#userPassword');
+const userUsername = document.querySelector('#userUsername');
+const welcomeText = document.querySelector('.welcome');
+const signInBtn = document.querySelector("#signin");
+
+signInBtn.addEventListener('click', () => {
+    event.preventDefault();
+    if(userUsername.value == "WEBTECPROJECT" && userPassword.value == "WEBTECSAAD") {
+        registerBtn.style.visibility = "hidden";
+        loginBtn.style.visibility = "hidden";
+        console.log("logged in!")
+        welcomeText.style.opacity = "1";
+        formPg.style.visibility = "hidden";
+        loginPg.style.left = '-100vh'; // Reset position of login page
+        registerPg.style.left = '100%'; // Reset position of register page
+
+    } else {
+        console.log("Invalid credentials");
+    }
 })
 
 
@@ -108,4 +130,10 @@ window.addEventListener('scroll', () => {
 
     palmBtmRight.style.right = "-" + value + "px";
     palmBtmRight.style.scaleX = "0." + value;
+})
+
+const lessonsBtn = document.querySelector("#get-started");
+
+lessonsBtn.addEventListener('click', () => {
+    window.open('./JM/index.html', '_blank');
 })
