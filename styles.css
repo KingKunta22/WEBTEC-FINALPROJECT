@@ -444,7 +444,7 @@ main {
     align-items:center;
     width:100%;
     flex-direction:column;
-    color:black;
+    color: #1e3a5f;
     margin-top:-5vh;
 }
 
@@ -452,12 +452,13 @@ main > .main-header {
     padding: 8rem;
     font-size:1.5rem;
     display:flex;    
-    background: rgb(255,255,255);
+    background: linear-gradient(to bottom, #ffffff, #a1c4fd, #c2e9fb);
     flex-direction: column;
     justify-content:center;
     align-items:center;
     text-align:center;
     width:100%;
+    color: #1e3a5f;
 }
 
 main > .main-header > p {
@@ -467,6 +468,15 @@ main > .main-header > p {
 
 main > .main-header > p:nth-child(2) {
     padding-top:4.5rem;
+}
+
+main > .main-header > p:nth-child(3) {
+    padding-bottom:4.5rem;
+}
+
+.main-header > h2{
+    width:65%;
+    padding:3vw 0 6vw 0;
 }
 
 .header-left {
@@ -510,16 +520,16 @@ main > .main-header > p:nth-child(2) {
 }
 
 .table-of-contents-wave .shape-fill {
-    fill: #FFFFFF;
+    fill: #c2e9fb;
 }
 
 main > .table-of-contents {
-    color:white;
+    color:#C4E1D0;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
-    min-height:100vh;
+    min-height:100vh;   
     width:100%;
     padding:15vw 10vw 0 10vw;
     background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/TableofContents1.jpg);

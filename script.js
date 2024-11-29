@@ -57,12 +57,13 @@ closeBtn.addEventListener('click', () => {
     registerPg.style.left = '100%'; // Reset position of register page
 })
 
-// FUNCTION FOR THE USER TO LOG IN
+// FUNCTION FOR THE USER TO REGISTER THEN LOG IN
 
 const userPassword = document.querySelector('#userPassword');
 const userUsername = document.querySelector('#userUsername');
 const welcomeText = document.querySelector('.welcome');
 const signInBtn = document.querySelector("#signin");
+const signUpBtn = document.querySelector("#signup");
 
 signInBtn.addEventListener('click', () => {
     event.preventDefault();
@@ -74,7 +75,6 @@ signInBtn.addEventListener('click', () => {
         formPg.style.visibility = "hidden";
         loginPg.style.left = '-100vh'; // Reset position of login page
         registerPg.style.left = '100%'; // Reset position of register page
-
     } else {
         console.log("Invalid credentials");
     }
