@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Lessons</title>
+    <!-- Latest Bootstrap 5 (ALWAYS INJECT BOOTSTRAP FIRST)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="../script.js"></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="boat-container">
+          <img src="./images/yahct-removebg-preview.png" alt="Sailing Boat" class="boat">
+        </div>
+        <div class="loader-bar">
+          <div class="progress"></div>
+        </div>
+        <p class="loading-text">Loading <span id="percentage">0%</span></p>
+    </div>
+    <main>
+        <nav class="side-nav">
+            <div class="home-page">
+                <button id="home-page">Home page</button>
+            </div>
+            <ul>
+                <li class="active"><a href="#section-one"><span>01</span>Computer Program</a></li>
+                <li><a href="#section-two"><span>02</span>Data vs. information</a></li>
+                <li><a href="#section-three"><span>03</span>Variables</a></li>
+                <li><a href="#section-four"><span>04</span>Algorithms</a></li>
+                <li><a href="#section-five"><span>05</span>Operations & Expressions</a></li>
+                <li><a href="#section-six"><span>06</span>Programming Structures</a></li>
+                <li><a href="#section-seven"><span>07</span>Selection Structures</a></li>
+                <li><a href="#section-eight"><span>08</span>Looping</a></li>
+                <li><a href="#section-nine"><span>09</span>Functions & Methods</a></li>
+                <li><a href="#section-ten"><span>10</span>Collections & Arrays</a></li>
+                <li><a href="#section-eleven"><span>11</span>Object-Oriented Programming</a></li>
+                <li><a href="#section-twelve"><span>12</span>Advanced OOP Concepts</a></li>
+            </ul>
+        </nav>
+        <div class="section-container">
+            <section id="section-one">
+                <div class="section-title">
+                    <h1>Lesson 01: Understanding the computer program</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>What is a computer program?</h1><br>
+                        <p>A computer program is a list of instructions arranged in some logical 
+                            order, which completely specifies how the computer is to solve a particular problem 
+                            or perform a specific task. The people who creates computer program are called 
+                            programmers. <br> <br> Just as human beings communicate with each other using languages such as Filipino, 
+                                English, or Chinese, programmers use a variety of special languages called programming 
+                                languages, to communicate with the computer. The instructions in a program are stated using computer 
+                                language such as C, Visual BASIC, JAVA and among others. Natural languages such as English and Filipino are not 
+                                suitable to use in computer programming because of their ambiguity and lack of precision.</p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Programming Languages</h1><br>
+                        <p>Writing a computer program requires the use of a programming 
+                            language that the computer can understand. <br>  The native language of the computer is the machine 
+                            language. This language is based on the binary low (0) and high (1) 
+                            signals that flow within the computer machine’s circuits. Data and instructions in the 
+                            machine level are all expressed in terms of combinations of 0’s and 1’s only. 
+                        <br><br>Programming the computer using the machine language as it was actually  
+                        done before could be very difficult. The use of abbreviations or mnemonics instead of  
+                        pure 0’s and 1’s in assembly language only partly lessened the difficulty and it was 
+                        still generally considered complicated to allow greater productivity. <br><br>
+                        The use of English – like instructions in high – level procedural 
+                        languages greatly facilitated the programming of the computer. Programs written 
+                        in these languages are easier to understand and are no longer constrained by the kind 
+                        of computer being programmed, thereby, making them portable to other kinds of 
+                        computers. <br><br>The use of very high – level problem – oriented languages 
+                        require only little training in programming because they are designed to solve specific 
+                        problems. To make computer programming even a lot easier, programming is being 
+                        developed to approach that of our natural languages. </p>
+                    </div>
+                    <button id="play-video-btn">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup" class="hidden">
+                        <iframe id="youtube-video" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-two">
+                <div class="section-title">
+                    <h1>Lesson 02: Data vs Information</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>What is data?</h1><br>
+                        <p>Data is defined as a set of symbols, which are used to, represents objects, 
+                            events, activities, quantities, and other entities, which can be processed or manipulated, by 
+                            manual or automatic means. Today, the computer is widely used in processing data.
+                            </p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>What is information?</h1><br>
+                        <p>Processed data is often called information. Information is characterized as useful in making 
+                            decisions. However, current use even in technical terms allows the interchanging of the words data and 
+                            information. </p>
+                    </div>
+                    <div class="section-content-three">
+                        <h1>Here is an example:</h1>
+                        <img class="datavsinfo"src="./images/DataVInfo.png" alt="">
+                        <p>Source: https://taxation88.blogspot.com/2019/11/difference-data-information.html</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section-three">
+                <div class="section-title">
+                    <h1>Lesson 03: Variables</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>What are variables?</h1><br>
+                        <p>Technically, variables are a symbolic name associated with a value and whose 
+                            associated value may be changed. Variables are somewhat served as containers, which 
+                           may contain values which are constant and which may be utilized, while the program is running 
+                           or being executed.</p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Rules in writing variable names</h1><br>
+                        <p>
+                            <ol>
+                                <li>A combination of alphabet characters (a – z, and A – Z), numeric digits 
+                                    (0 – 9), and the underscores (_) can be used.</li>
+                                <li>The first character in the name should not be a numeric digit.</li>
+                                <li>No embedded space/s can be placed between the characters. This means you cannot 
+                                    separate words in a name by a space.</li>
+                                <li>Being descriptive is helpful. Use meaningful names that represent the item being described. If 
+                                    the identifier is used to reference a person’s age, call it age, not x. The more descriptive your 
+                                    identifiers, the easier it is for you and others to read your code.</li>
+                            </ol>
+                        </p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Ways in writing variable names</h1><br>
+                        <p>Proper variable naming in program is important. In connection with this, programmers are trained to 
+                            use proper variable declaration and use naming conventions for better understanding of computer programs. </p>
+                        <p>
+                            <ol>
+                                <li><strong>Pascal Case</strong> – the first letter in the identifier and the first letter of each subsequent concatenated 
+                                    word are being capitalized.</li>
+                                <li><strong>Camel Case/Hungarian Notation </strong>– the first letter of an identifier is 
+                                    lowercase and the first letter of each subsequent concatenated word is capitalized.</li>
+                                <li><strong>Uppercase –</strong> variables or identifiers use capitalization of all of its characters </li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="section-four">
+                <div class="section-title">
+                    <h1>Lesson 04: Algorithms</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>What is an algorithm</h1><br>
+                        <p>An algorithm is a set of commands that must be followed for a computer to perform calculations or other problem-solving operations. According to its formal definition, an algorithm is a finite set of instructions carried out in a specific order to perform a particular task.</p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Properties of an algorithm</h1><br>
+                        <ol>
+                            <li><strong>Finiteness</strong> – is an algorithm terminates after a finite number of steps.</li>
+                            <li><strong>Definiteness </strong>–  means that the action specified by the step cannot be 
+                                interpreted (explain the meaning of) in multiple ways & can be performed without any confusion.</li>
+                            <li><strong>Input –</strong> an algorithm accepts zero or more inputs</li>
+                            <li><strong>Output –</strong> it produces at least one output </li>
+                            <li><strong>Effectiveness –</strong> it consists of basic instructions that are realizable. This means that using the given 
+                                inputs in a finite amount of time can perform the instructions. </li>
+                        </ol>
+                        </p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Ways of presenting an algorithm</h1><br>
+                        <ol>
+                            <li><strong>Pseudocode</strong> – wherein ways of achieving a certain objective is being presented through 
+                                text.</li>
+                            <li><strong>Flowchart –</strong> A flowchart is a pictorial representation of the sequence of steps in an algorithm or in a 
+                                computer program.</li>
+                        </ol>
+                        </p>
+                    </div>
+                    <button id="play-video-btn2">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup2" class="hidden">
+                        <iframe id="youtube-video2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-five">
+                <div class="section-title">
+                    <h1>Lesson 05: Arithmetic Operations & Expressions</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Arithmetic Operations & Expressions</h1><br>
+                        <p>Data is defined as a set of symbols, which are used to, represents objects, 
+                            events, activities, quantities, and other entities, which can be processed or manipulated, by 
+                            manual or automatic means. Today, the computer is widely used in processing data.
+                            </p>
+                    </div>
+                    <div class="section-content-three">
+                        <h1>The following table contains arithmetic operators:</h1>
+                        <img class="arithmeticops" src="./images/ArithmeticOperations.png" alt="">
+                        <p>Source: Jaymar Vilvestre (COPRO1)</p>
+                    </div>
+                    <button id="play-video-btn3">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup3" class="hidden">
+                        <iframe id="youtube-video3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-six">
+                <div class="section-title">
+                    <h1>Lesson 06: Programming Structures</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Programming Structures</h1><br>
+                        <p>The program could get so messy and difficult to understand and maintain if it will not 
+                            use the structured approach. <br>When writing algorithms, some or all of the following situations may arise:</p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Three types of Programming Structures</h1><br>
+                        <ol>
+                            <li><strong>Sequence Structure</strong> – Two or more tasks are to be carried out in sequence.</li>
+                            <li><strong>Selection Structure </strong>– One or two tasks are to be selected depending on a specified condition. One 
+                                or two tasks may be to do nothing. </li>
+                            <li><strong>Repetition Structure –</strong> A task is to be carried out repeatedly.</li>
+                        </ol>
+                        </p>
+                    </div>
+                    <div class="section-content-two">
+                        <p>These three control structures are referred to as structured programming constructs. Any 
+                            algorithm can be written by using only these constructs.</p>
+                        <p>Algorithms written with only the sequence, selection, and repetition structures are called structured 
+                            algorithms. The process of writing such algorithms is called structured programming and the 
+                            resulting programs are called structured programs.</p>
+                            <p>The selection structure and the repetition structure may also be viewed as tasks in a sequence structure. 
+                            Hence, a program may be taken as a sequence of a mixture of sequence, selection and repetition structures. 
+                            Note that there is always 1 entry point and 1 exit point in each structure. This gives us a way of 
+                            writing our programs in modules. </p>
+                    </div>
+                    <button id="play-video-btn4">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup4" class="hidden">
+                        <iframe id="youtube-video4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-seven">
+                <div class="section-title">
+                    <h1>Lesson 07: Selection Structures</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Relational Operations & Expressions</h1><br>
+                        <p>Relational operators are used in relational 
+                            expression/s to compare the values of any two expressions. A 
+                            relational expression will evaluate to a logical value of either true 
+                            (.T.) or false (.F.). A true or false expression is also called a 
+                            logical expression or condition.</p>
+                    </div>
+                    <div class="section-content-one">
+                        <h1>LOGICAL OPERATIONS and LOGICAL EXPRESSIONS</h1><br>
+                        <p>Logical operators are used in connection with true (.T.) or false (.F.) 
+                            relational expressions that compare the values of some data.</p>
+                        <p>Logical operators evaluate Boolean expressions and return a 
+                            Boolean value. A logical expression, which consists of one or more 
+                            relational expressions and logical operators, will also evaluate to either true or false. </p>
+                        <p>Logical expressions and relational expressions are the same in the sense that they both 
+                            represent true or false logical conditions. </p>
+                    </div>
+                    <div class="section-content-three">
+                        <div class="images">
+                            <img class="relationalops" src="./images/RelationalOperations.png" alt="">
+                            <img class="logicalops" src="./images/LogicalOperations.png" alt="">
+                        </div>
+                        <p>Source: Jaymar Vilvestre (COPRO1)</p>
+                    </div>
+                </div>
+            </section>
+            <section id="section-eight">
+                <div class="section-title">
+                    <h1>Lesson 08: Looping</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Incrementation and Decrementation</h1>
+                        <p>INCREMENTATION or to increment the value of a numeric variable means to 
+                            increase the value stored in that variable by a certain specified number. This is expressed 
+                            as: <br>
+                              variable = variable + increment  <br>
+                            This means that the new of the variable is equal to its previous value plus the increment. </p>
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Decrementation</h1>
+                        <p>DECREMENTATION or to decrement the value of a numeric variable means to decrease the 
+                            value stored in that variable by a certain specified number.  
+                            This is expressed as: <br>
+                                
+                                variable = variable – decrement <br>
+                                
+                                This means that the new value of the variable is equal to its previous value minus the decrement.
+                    </div>
+                    <div class="section-content-two">
+                        <h1>Counter-controlled Loops</h1>
+                        <p>Used when the loop should be executed a specified number of times. With a 
+                            counter-controlled loop, a variable simulating a counter is used as the loop 
+                            control variable to keep track of the number of iterations.
+                        </p>
+                        <h1>Sentinel-controlled Loops</h1>
+                        <p>SENTINEL-CONTROLLED LOOP is a type of loop that is 
+                            terminated by entering or encountering a sentinel value. Sentinel-controlled 
+                            loops are often used for inputting data when you do not know the exact number 
+                            of values to be entered.
+                        </p>
+                        <h1>Nested-controlled Loops</h1>
+                        <p>A nested loop is a logical structure used in computer programming where two repeating statements are 
+                            placed in a "nested" form, i.e., one loop is situated within the body of the other.
+                        </p>
+                    </div>
+                    <button id="play-video-btn5" class="loop">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup5" class="hidden">
+                        <iframe id="youtube-video5" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-nine">
+                <div class="section-title">
+                    <h1>Lesson 09: Functions & Methods</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Functions & Methods in C#</h1>
+                        <p>In C#, functions and methods are essentially the same, but the term method is more commonly used because functions are typically associated with procedural programming, while methods are tied to object-oriented programming (OOP).
+                        </p>
+                    </div>
+                    <div class="section-content-one">
+                        <h1>Basic structure of a method</h1>
+                        <p>access_modifier return_type MethodName(parameters) <br>
+                            {<br>
+                                // Code to execute <br>
+                            }
+                        </p><br>
+                        <p>access_modifier defines the method's visibility (e.g., public, private, protected, internal). <br>
+                            return_type specifies the data type of the value returned (void if no return value). <br>
+                            MethodName is the name of the method. <br>
+                            parameters are the input values passed to the method (optional). <br>
+                            </p>
+                            <br>
+                            <p>A typical method in C# has a specific syntax. It consists of an access modifier that defines its visibility, a return type that indicates what kind of value the method returns (or void if it does not return anything), a method name, and an optional list of parameters.</p> <br>
+                            <p>C# supports different types of methods, including instance methods and static methods. Instance methods require an object to be created before they can be called.</p>
+                    </div>
+                    <button id="play-video-btn6">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup6" class="hidden">
+                        <iframe id="youtube-video6" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-ten">
+                <div class="section-title">
+                    <h1>Lesson 10: Collections & Arrays</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Collections & Arrays in C#</h1>
+                        <p>In C#, data structures play a crucial role in organizing and managing data efficiently. Among the most fundamental and widely used structures are arrays and collections. While arrays provide a basic, fixed-size container for storing elements of the same type, collections offer more flexibility and functionality, allowing developers to handle dynamic data and perform complex operations. Understanding the differences and use cases of arrays and collections is essential for writing efficient and maintainable code in C#.
+                        </p>
+                    </div>
+                    <div class="section-content-one">
+                        <h1>Arrays</h1>
+                        <p>An array is a linear data structure that stores a fixed number of elements of the same type. Arrays are indexed, meaning each element can be accessed using its position within the array. The zero-based indexing system makes arrays efficient for tasks where quick access to elements by position is required.</p><br>
+                        <p>For example, a simple array of integers in C# can be declared and initialized as follows:
+                            <br><br>int[] numbers = { 1, 2, 3, 4, 5 };
+                        </p>
+                        <p>Arrays in C# can be single-dimensional or multi-dimensional. Multi-dimensional arrays, like two-dimensional arrays, are useful for representing data in a grid or matrix form: <br>
+                            int[,] matrix = { <br>
+                            &ThickSpace; &ThickSpace; &ThickSpace;{ 1, 2, 3 },<br>
+                            &ThickSpace; &ThickSpace; &ThickSpace;{ 4, 5, 6 },<br>
+                            &ThickSpace; &ThickSpace; &ThickSpace;{ 7, 8, 9 }<br>
+                            };</p>
+                        <p>Although arrays provide fast access to elements, their main limitation is their fixed size. Once an array is created, its size cannot be changed, which can lead to inefficient memory usage if the exact size of the data is unknown at compile time.</p>
+                    </div>
+                    <button id="play-video-btn7">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup7" class="hidden">
+                        <iframe id="youtube-video7" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-eleven">
+                <div class="section-title">
+                    <h1>Lesson 11: Object-Oriented Programming</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Object-Oriented Programming in C#</h1><br>
+                        <p>Object-Oriented Programming (OOP) in C# is based on four key principles: encapsulation, inheritance, polymorphism, and abstraction, which help create modular and maintainable code.</p>
+                    </div>
+                    <div class="section-content-two">
+                        <ol>
+                            <li><strong>Encapsulation</strong>: Bundles data and methods within a class, restricting direct access to them using access modifiers like public and private.</li>
+                            <br><p>public class Person { private string name; public string GetName() => name; }</p>
+                            <li><strong>Inheritance </strong>: Allows one class to derive properties and behavior from another, promoting code reuse.</li>
+                            <br><p>public class Dog : Animal { public void Bark() => Console.WriteLine("Dog barks"); }</p>
+                            <li><strong>Polymorphism</strong>: Enables methods to behave differently based on the object’s actual type, using method overriding or interfaces.</li>
+                            <br><p>public override void Speak() => Console.WriteLine("Dog barks");</p>
+                            <li><strong>Abstraction</strong>: Hides complex details and shows only essential features using abstract classes or interfaces.</li>
+                            <br><p>public abstract class Shape { public abstract void Draw(); }</p>
+                        </ol>
+                        </p>
+                        <p>In summary, C#'s OOP features make it easier to write reusable, flexible, and well-organized code.
+                        </p>
+                    </div>
+                    <button id="play-video-btn8">Play Video</button>
+                    <!-- Video Popup -->
+                    <div id="video-popup8" class="hidden">
+                        <iframe id="youtube-video8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="section-twelve">
+                <div class="section-title">
+                    <h1>Lesson 12: Advanced OOP Concepts</h1>
+                </div>   
+                <div class="section-content">
+                    <div class="section-content-one">
+                        <h1>Advanced OOP concepts in C#</h1><br>
+                        <p>Object-Oriented Programming (OOP) in C# is based on four key principles: encapsulation, inheritance, polymorphism, and abstraction, which help create modular and maintainable code.</p>
+                    </div>
+                    <div class="section-content-two">
+                        <ol>
+                            <li><strong>Interfaces and Abstract Classes</strong>: Interfaces define contracts without implementation, while abstract classes provide partial implementations. Both support polymorphism, allowing multiple inheritance of behavior through interfaces.</li>
+                            <br><p>interface IMovable { void Move(); } <br>
+                                abstract class Animal { public abstract void Speak(); }</p>
+                            <li><strong>Generics </strong>: Enable type-safe data structures and methods, improving code reusability without sacrificing type safety.</li>
+                            <br><p>pList&lt;int&gt; numbers = new List&lt;int&gt;();</p>
+                            <li><strong>Delegates and Events</strong>: Delegates are type-safe function pointers that allow methods to be passed as arguments. Events build on delegates to provide a messaging system between objects.</li>
+                            <br><p>public delegate void Notify(); <br>
+                                public event Notify OnNotify;</p>
+                            <li><strong>Reflection</strong>: Allows inspection and dynamic invocation of types and methods at runtime, useful for building frameworks and libraries.</li>
+                            <br><p>Type type = typeof(MyClass);</p>
+                        </ol>
+                        </p>
+                        <p>These advanced OOP features in C# empower developers to build scalable, dynamic, and maintainable applications by promoting flexibility and reducing code duplication.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

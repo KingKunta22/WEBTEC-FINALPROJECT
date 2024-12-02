@@ -64,19 +64,21 @@ const userUsername = document.querySelector('#userUsername');
 const welcomeText = document.querySelector('.welcome');
 const signInBtn = document.querySelector("#signin");
 const signUpBtn = document.querySelector("#signup");
+let isLoggedIn = false;
 
 signInBtn.addEventListener('click', () => {
     event.preventDefault();
     if(userUsername.value == "WEBTECPROJECT" && userPassword.value == "WEBTECSAAD") {
         registerBtn.style.visibility = "hidden";
         loginBtn.style.visibility = "hidden";
-        console.log("logged in!")
+        isLoggedIn = true;
         welcomeText.style.opacity = "1";
         formPg.style.visibility = "hidden";
         loginPg.style.left = '-100vh'; // Reset position of login page
         registerPg.style.left = '100%'; // Reset position of register page
     } else {
         console.log("Invalid credentials");
+        isLoggedIn = false;
     }
 })
 
@@ -134,6 +136,32 @@ window.addEventListener('scroll', () => {
 
 const lessonsBtn = document.querySelector("#get-started");
 
+const lessonNine = document.querySelector("#section-nine")
+const lessonTen = document.querySelector("#section-ten")
+const lessonEleven = document.querySelector("#section-eleven")
+const lessonTwelve = document.querySelector("#section-twelve")
+
+
 lessonsBtn.addEventListener('click', () => {
-    window.open('./JM/index.html', '_blank');
+    if(isLoggedIn == true) {
+        ///  advanced lessons should be unlocked
+        console.log('unlocked')
+        console.log(lessonNine);
+        window.open('./Lessons-Page/index.html', '_blank');
+    } else if(isLoggedIn == false) {
+        console.log('locked')
+        console.log(lessonNine);
+        window.open('./Lessons-Page-Locked/index.html', '_blank');
+        ///  advanced lessons should be unlocked
+        lessonNine.classList.add('.locked')
+        lessonTen.classList.add('.locked')
+        lessonEleven.classList.add('.locked')
+        lessonTwelve.classList.add('.locked')
+    }
+})
+
+const setSailBtn = document.querySelector('#set-sail');
+
+setSailBtn.addEventListener('click', () => {
+    document.getElementById("table-of-contents").scrollIntoView();
 })

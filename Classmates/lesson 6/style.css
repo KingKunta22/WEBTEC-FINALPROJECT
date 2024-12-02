@@ -1,0 +1,83 @@
+*{
+    font-family: "Poppins", sans-serif;
+     
+}
+body{
+    height: 50em;
+    display:flex ;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+}
+.lesson{
+    text-align: start;
+    width: 100%;
+    margin-right: .5em; 
+    
+}
+hr {
+    border-top: 3px solid black;
+}
+h1{
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin-top:2em ;  
+    text-wrap: nowrap;
+}
+.lesson-container{
+    border-color: transparent;
+}
+.lesson-container{
+    height: auto;
+    width: 90%;
+    padding: 1em;
+    margin: 0 auto;
+    display:flex ;
+    flex-direction: column;
+    
+    
+}
+.learning{
+    justify-content: baseline ;
+}
+.first{
+    font-size: 1.5em;
+}
+.sentence{
+    padding: .5em;
+    
+}
+.lessons{
+    font-size: 1.5em;
+}
+
+.bold{
+    font-size: larger;
+    font-style:italic; 
+     
+}
+.italic{
+    font-style: italic;
+    font-weight: 600;
+    padding-left: 10em;
+}
+.images{
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.task1{
+    text-align: center;
+    color: lightslategray;
+    font-style: italic;
+}
+

@@ -1,0 +1,71 @@
+    
+*{
+    font-family: "Poppins", sans-serif;
+}.lesson{
+    text-align: start;
+    width: 100%;
+    margin-right: .5em; 
+    background-color: blue;
+}
+.lesson-container{
+    display: flex;
+    justify-content: center;
+}
+
+h1{ 
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin-top:2em ;  
+    text-wrap: nowrap;
+}
+body{
+    
+    height: 50em;
+    display:flex ;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+fieldset{
+    height: auto;
+    width: 90%;
+    padding: 1em;
+    margin: 0 auto;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-style: italic;
+}
+.paragraph{
+    padding: .5em;
+}
+.table{
+    width: 100vh;
+}
+.numbers{
+    padding-left: 5em;
+    font-size: 2em;
+    padding-bottom: 1em;
+}.numbers1{
+    font-size: large;
+    padding-left: 10em;
+    font-style: italic;
+}  
+.line{
+    text-decoration: underline;
+    text-decoration-color:blue ;
+}
+strong{
+    font-style: italic;
+}
+.links{
+    font-size: larger;
+    font-style: italic;
+}
+
