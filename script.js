@@ -66,6 +66,35 @@ const signInBtn = document.querySelector("#signin");
 const signUpBtn = document.querySelector("#signup");
 let isLoggedIn = false;
 
+
+
+signUpBtn.addEventListener('click', () => {
+    event.preventDefault();
+    formPg.style.visibility = "visible";
+    loginPg.style.left = '0';
+    registerPg.style.left = '100%';
+    let newUser = document.querySelector('#newUserUsername');
+    let newPassword = document.querySelector('#newUserPassword');
+    console.log(newUser.value, newPassword.value);
+    
+    signInBtn.addEventListener('click', () => {
+        event.preventDefault();
+        console.log(newUser.value, newPassword.value);  
+        if (userUsername.value == newUser.value && userPassword.value == newPassword.value) {
+            registerBtn.style.visibility = "hidden";
+            loginBtn.style.visibility = "hidden";
+            isLoggedIn = true;
+            welcomeText.style.opacity = "1";
+            formPg.style.visibility = "hidden";
+            loginPg.style.left = '-100vh'; // Reset position of login page
+            registerPg.style.left = '100%'; // Reset position of register page
+        } else {
+            console.log("Invalid credentials");
+            isLoggedIn = false;
+        }
+    })
+})
+
 signInBtn.addEventListener('click', () => {
     event.preventDefault();
     if(userUsername.value == "WEBTECPROJECT" && userPassword.value == "WEBTECSAAD") {

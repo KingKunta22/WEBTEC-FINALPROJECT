@@ -791,3 +791,57 @@ section {
     width:100%;
     height:100%;
 }
+
+
+#bubbles {
+    position:absolute;
+    right:.2%;
+    animation: animationBubbles 8s infinite ease-in-out;
+    animation-duration:5s;
+}
+
+#bubbles2 {
+    position:absolute;
+    z-index:100;
+    width:20%;
+    height:auto;
+    left:10%;
+    animation: animationBubbles infinite ease-out;
+    animation-duration:6s;
+    transform:scaleX(-1);
+}
+
+@keyframes animationBubbles {
+    0% {
+        transform:translateY(40%);
+    }
+    100% {
+        transform:translateY(-100%);
+    }
+}
+
+#fish1 {
+    position:absolute;
+    bottom:6%;
+    width:5%;
+    transform:rotateX(60deg);
+    animation: animationFish 10s infinite ease-in-out;
+}
+
+#fish2 {
+    position:absolute;
+    bottom:40%;
+    width:5%;
+    transform:scaleY(-1);
+    animation: animationFish 4s infinite ease-in-out;
+    animation-direction:reverse;
+    animation-delay: 2000ms;
+}
+
+@keyframes animationFish {
+    from {
+        transform:translateX(70vw);
+    } to {
+        transform:translateX(-30vw);
+    }
+}

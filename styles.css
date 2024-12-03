@@ -799,6 +799,26 @@ main > .table-of-contents {
     transform:translateY(-50%);
 }
 
+.locked {
+    height:100%;
+    width:100%;
+    filter:blur(10px);
+    position:relative;
+}
+
+.locked::before {
+    content:'LOG IN TO UNLOCK CONTENT';
+    font-family:inherit;
+    font-size:inherit;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100%;
+    height:100%;
+    z-index:9999;
+}
+
 .about-us-wave {
     position: absolute;
     top: 0;
@@ -826,6 +846,8 @@ main > .table-of-contents {
     background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./images/AboutUsSeabed.jpg);
     display:flex;
     flex-direction:column;
+    justify-content:center;
+    align-items:center;
     min-height:150vh;
     width:100%;
     padding:5vw 10vw 0 10vw;
@@ -833,7 +855,8 @@ main > .table-of-contents {
     background-position:top;
     background-size:cover;
     overflow:hidden;
-    color:#C4E1D0;
+    color:hsl(145, 33%, 90%);
+    text-align:center;
 }
 
 .group-description {
@@ -842,6 +865,7 @@ main > .table-of-contents {
 
 #about-us > h1 {
     padding-top:12%;
+    padding-bottom:3%;
     width:100%;
     font-weight:300;
     font-size:3rem;
@@ -850,36 +874,145 @@ main > .table-of-contents {
     text-align:left;
 }
 
-.team {
-    display: flex;
+#about-us > .group-description {
+    font-size:1.2rem;
+    width: 80%;
+}
+
+#carouselExampleRide {
+    width:60%;
+    height:100%;
+    display:flex;
     justify-content:center;
     align-items:center;
-    gap:3%;
+    transition:all .2s ease-in-out;
+    padding:6% 0;
 }
 
-.card {
-    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(./images/amaca/John\ Mark.png);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:cover;
-}
-
-.locked {
-    height:100%;
-    width:100%;
-    filter:blur(10px);
+.carousel-item {
+    width:500px;
+    transition:all .2s ease-in-out;
     position:relative;
 }
 
-.locked::before {
-    content:'LOG IN TO UNLOCK CONTENT';
+.carousel-item:nth-child(1):hover::before {
+    content:'Abastillas, John Mark';
+    text-align:center;
+    text-transform:uppercase;
+    padding-top:40%;
+    background:linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5));
+    height:100%;
+    width:100%;
     font-family:inherit;
-    font-size:inherit;
+    font-style:italic;
+    font-size:2rem;
+    color:white;
+    font-weight:800;
+    text-shadow:1px 1px 1px black;
+    letter-spacing:2px;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    left:calc(50% + 24%);
+    transform:translateX(-50%);
+    transition:all .2s ease-in-out;
+}
+
+.carousel-item:nth-child(2):hover::before {
+    content:'Depaz, Brylle';
+    text-align:center;
+    text-transform:uppercase;
+    padding-top:40%;
+    background:linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5));
+    height:100%;
+    width:100%;
+    font-family:inherit;
+    font-style:italic;
+    font-size:2rem;
+    color:white;
+    font-weight:800;
+    text-shadow:1px 1px 1px black;
+    letter-spacing:2px;
+    position:absolute;
+    left:calc(50% + 24%);
+    transform:translateX(-50%);
+    transition:all .2s ease-in-out;
+}
+
+.carousel-item:nth-child(3):hover::before {
+    content:'Sagarino, Leonard Chloie';
+    text-align:center;
+    text-transform:uppercase;
+    padding-top:40%;
+    background:linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5));
+    height:100%;
+    width:100%;
+    font-family:inherit;
+    font-style:italic;
+    font-size:2rem;
+    color:white;
+    font-weight:800;
+    text-shadow:1px 1px 1px black;
+    letter-spacing:2px;
+    position:absolute;
+    left:calc(50% + 24%);
+    transform:translateX(-50%);
+    transition:all .2s ease-in-out;
+}
+
+.carousel-item:nth-child(4):hover::before {
+    content:'Amaca, Tito';
+    text-align:center;
+    text-transform:uppercase;
+    padding-top:40%;
+    background:linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5));
+    height:100%;
+    width:100%;
+    font-family:inherit;
+    font-style:italic;
+    font-size:2rem;
+    color:white;
+    font-weight:800;
+    text-shadow:1px 1px 1px black;
+    letter-spacing:2px;
+    position:absolute;
+    left:calc(50% + 24%);
+    transform:translateX(-50%);
+    transition:all .2s ease-in-out;
+}
+
+.carousel-item > img {
     width:100%;
     height:100%;
-    z-index:9999;
+    object-fit:cover;
+    margin-left:24%;
+}
+
+#contact-us {
+    height:20vh;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    color:white;
+}
+
+.contacts {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.contacts > a {
+    display:flex;
+    justify-content:start;
+    color:inherit;
+    font-family:inherit;
+    font-size:inherit;
+    transition:all .2s ease-in-out;
+    text-decoration: none;
+    padding:2% 5%;
+}
+
+.contacts > a:hover {
+    color:hsl(145, 33%, 80%);
+    transition:all .2s ease-in-out;
 }
